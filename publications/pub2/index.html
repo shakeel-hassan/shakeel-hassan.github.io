@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalable Contrastive Learning – Shakeel Hassan</title>
+  <meta name="description" content="Project page for Scalable Contrastive Learning for Multimodal Representation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="site-title">Shakeel Hassan</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#publications" class="active">Publications</a></li>
+          <li><a href="../../blog/index.html">Blog</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="../../index.html#publications" class="back-link">
+        ← Back to Publications
+      </a>
+
+      <div class="page-header">
+        <h1>Scalable Contrastive Learning for Multimodal Representation</h1>
+        <p class="meta">
+          Alice Chen, <strong>Shakeel Hassan</strong>, Bob Williams ·
+          <em>ICML 2024 – International Conference on Machine Learning</em>
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2345.6789" class="tag tag-gray" target="_blank" rel="noopener">
+            📄 Paper (arXiv)
+          </a>
+          <a href="https://github.com/shakeel-hassan/scalable-contrastive" class="tag tag-green" target="_blank" rel="noopener">
+            💻 Code (GitHub)
+          </a>
+          <a href="#bibtex" class="tag tag-blue">
+            📋 BibTeX
+          </a>
+        </div>
+      </div>
+
+      <div style="background: var(--color-accent); border-radius: var(--radius); height: 260px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; border: 1px solid var(--color-border);">
+        <p style="color: var(--color-muted); font-size: 1rem;">[ Architecture diagram ]</p>
+      </div>
+
+      <div class="page-content">
+        <div class="prose">
+
+          <div class="pub-abstract">
+            <strong>Abstract.</strong> Contrastive learning has achieved remarkable success in
+            unimodal settings, but scaling it to multimodal data—where images, text, and audio
+            must be jointly aligned—remains challenging due to computational cost and data
+            imbalance. We introduce ScaleCL, a memory-efficient contrastive learning framework
+            that employs cross-modal momentum queues and adaptive hard-negative mining to
+            achieve state-of-the-art zero-shot transfer on 12 benchmarks while using 3× less
+            GPU memory than comparable methods.
+          </div>
+
+          <h2>Background</h2>
+          <p>
+            Contrastive objectives train encoders to push representations of semantically
+            similar pairs together and dissimilar pairs apart. CLIP showed this principle works
+            spectacularly for image–text pairs at scale. However, extending this to three or
+            more modalities introduces combinatorial blowup in negative pairs and requires
+            careful balancing across modality-specific data distributions.
+          </p>
+
+          <h2>ScaleCL Framework</h2>
+          <p>
+            ScaleCL introduces three key contributions:
+          </p>
+          <ul>
+            <li><strong>Cross-modal momentum queues</strong> maintain large negatives pools without
+            storing full batch embeddings, reducing memory by 3×.</li>
+            <li><strong>Adaptive hard-negative mining</strong> dynamically adjusts negative sampling
+            temperature per modality pair, improving training signal quality.</li>
+            <li><strong>Hierarchical alignment loss</strong> aligns representations at both
+            fine-grained and coarse-grained semantic levels.</li>
+          </ul>
+
+          <h2>Results</h2>
+          <p>
+            On 12 zero-shot transfer benchmarks spanning image classification, video retrieval,
+            and audio-text matching, ScaleCL improves over CLIP by an average of 4.3 points
+            while reducing peak GPU memory from 48 GB to 16 GB.
+          </p>
+
+          <h2 id="bibtex">BibTeX</h2>
+          <pre><code>@inproceedings{chen2024scalecl,
+  title     = {Scalable Contrastive Learning for Multimodal Representation},
+  author    = {Chen, Alice and Hassan, Shakeel and Williams, Bob},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2024}
+}</code></pre>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Shakeel Hassan · <a href="../../index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

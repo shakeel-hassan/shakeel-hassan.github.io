@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Research Workflow – Shakeel Hassan</title>
+  <meta name="description" content="Tools, habits, and mental models that keep Shakeel Hassan productive as a researcher." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="site-title">Shakeel Hassan</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#publications">Publications</a></li>
+          <li><a href="../index.html" class="active">Blog</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="../index.html" class="back-link">← Back to Blog</a>
+
+      <div class="page-header">
+        <h1>My Research Workflow: Tools and Habits that Work for Me</h1>
+        <p class="meta">January 10, 2025 · 8 min read · <span class="tag tag-gray" style="font-size:0.78rem; padding:0.15rem 0.5rem;">Productivity</span></p>
+      </div>
+
+      <div class="page-content">
+        <div class="prose">
+
+          <p>
+            Research productivity is deeply personal. What works for one person may be
+            completely counterproductive for another. With that caveat in mind, here's
+            what has worked for me after years of trial and error across undergrad, grad
+            school, and industry research.
+          </p>
+
+          <h2>Paper Management</h2>
+          <p>
+            I use <strong>Zotero</strong> for reference management. It has a browser extension
+            that lets me save papers with one click, and it integrates with my writing tools.
+            I keep a curated "Reading Queue" collection and try to process it weekly.
+          </p>
+          <p>
+            For each paper I read seriously, I write a short note (3–5 bullet points) directly
+            in Zotero: the main contribution, the key insight, potential weaknesses, and
+            relevance to my own work. This forces active reading and makes papers recoverable
+            months later.
+          </p>
+
+          <h2>Code Organisation</h2>
+          <p>
+            Every project gets a repo with a consistent structure:
+          </p>
+          <pre><code>project/
+  data/          # raw and processed data (gitignored)
+  notebooks/     # exploratory Jupyter notebooks
+  src/           # library code, importable modules
+  experiments/   # runnable scripts, one per experiment
+  results/       # outputs, figures (gitignored)
+  README.md</code></pre>
+          <p>
+            I treat <code>notebooks/</code> as a scratch pad and <code>src/</code> as
+            production code. When an idea from a notebook proves useful, I refactor it into
+            <code>src/</code>. This keeps the codebase clean without impeding exploration.
+          </p>
+
+          <h2>Writing</h2>
+          <p>
+            I write papers in <strong>LaTeX</strong> (Overleaf for collaboration) and use
+            <strong>Grammarly</strong> for a first-pass grammar check. I find it useful to
+            write the introduction last — after the method and experiments are done, the story
+            becomes much clearer.
+          </p>
+          <p>
+            For blog posts and longer notes, I use <strong>Obsidian</strong>. The bidirectional
+            linking feature helps me connect ideas across different projects.
+          </p>
+
+          <h2>Tracking Experiments</h2>
+          <p>
+            I log all experiments with <strong>Weights &amp; Biases</strong>. Every run gets
+            tagged with the experiment name and hypothesis. Before running anything, I write
+            down what I expect to happen — this forces me to think clearly and makes
+            surprising results much more obvious.
+          </p>
+
+          <h2>Weekly Review</h2>
+          <p>
+            Every Friday I spend 30 minutes reviewing the week:
+          </p>
+          <ul>
+            <li>What did I actually accomplish?</li>
+            <li>What surprised me?</li>
+            <li>What should I prioritise next week?</li>
+          </ul>
+          <p>
+            This sounds simple, but without it I consistently drifted toward low-priority
+            tasks that felt urgent but weren't important.
+          </p>
+
+          <h2>Taking Breaks</h2>
+          <p>
+            This is the advice I ignored the longest and wish I hadn't. Scheduled breaks —
+            both within a day (Pomodoro) and across weeks (actual vacations) — make a
+            measurable difference to insight quality. Some of my best ideas have come on
+            walks or while cooking.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Shakeel Hassan · <a href="../../index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
