@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Data Visualization with RLHF – Shakeel Hassan</title>
+  <meta name="description" content="Project page for Interactive Data Visualization with Reinforcement Learning from Human Feedback." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="site-title">Shakeel Hassan</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#publications" class="active">Publications</a></li>
+          <li><a href="../../blog/index.html">Blog</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="../../index.html#publications" class="back-link">
+        ← Back to Publications
+      </a>
+
+      <div class="page-header">
+        <h1>Interactive Data Visualization with Reinforcement Learning from Human Feedback</h1>
+        <p class="meta">
+          <strong>Shakeel Hassan</strong>, Carol Lee, David Kumar, Eve Martinez ·
+          <em>CHI 2023 – ACM Conference on Human Factors in Computing Systems</em>
+          · 🏆 <strong>Best Paper Award</strong>
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/3456.7890" class="tag tag-gray" target="_blank" rel="noopener">
+            📄 Paper (arXiv)
+          </a>
+          <a href="https://github.com/shakeel-hassan/rl-dataviz" class="tag tag-green" target="_blank" rel="noopener">
+            💻 Code (GitHub)
+          </a>
+          <a href="https://acm.org/doi/example" class="tag tag-gray" target="_blank" rel="noopener">
+            🔗 ACM DL
+          </a>
+          <a href="#bibtex" class="tag tag-blue">
+            📋 BibTeX
+          </a>
+        </div>
+      </div>
+
+      <div style="background: var(--color-accent); border-radius: var(--radius); height: 260px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; border: 1px solid var(--color-border);">
+        <p style="color: var(--color-muted); font-size: 1rem;">[ Demo video ]</p>
+      </div>
+
+      <div class="page-content">
+        <div class="prose">
+
+          <div class="pub-abstract">
+            <strong>Abstract.</strong> Designing effective data visualizations typically requires
+            expert knowledge and iterative refinement. We present VizRL, a system that uses
+            reinforcement learning from human feedback (RLHF) to automatically adapt
+            visualization layouts and encodings to individual users' analytical tasks.
+            Through a Wizard-of-Oz study and a fully automated deployment, VizRL reduces
+            the time to insight by 35% compared to static, expert-designed dashboards,
+            with particularly strong gains for users without prior visualization training.
+          </div>
+
+          <h2>Problem</h2>
+          <p>
+            Data visualization design is hard. Choosing the right chart type, encoding, and
+            layout for a given analytical question typically requires expertise that most users
+            lack. Automatic recommendation systems either rely on rigid rule sets or require
+            large amounts of labeled training data specific to each dataset.
+          </p>
+          <p>
+            We ask: can a system learn good visualization policies <em>on the fly</em>, driven
+            entirely by real-time human feedback, without requiring pre-labeled training corpora?
+          </p>
+
+          <h2>VizRL System</h2>
+          <p>
+            VizRL frames visualization adaptation as a sequential decision problem. At each step:
+          </p>
+          <ol>
+            <li>The system observes the current visualization state and inferred user query.</li>
+            <li>A policy network proposes modifications (chart type, color encoding, axis scale).</li>
+            <li>The user implicitly signals satisfaction through interaction patterns (dwell time,
+            zoom actions, export events) or explicit thumbs-up/down feedback.</li>
+            <li>A reward model translates these signals into a scalar reward used to update the policy.</li>
+          </ol>
+
+          <h2>Key Findings</h2>
+          <ul>
+            <li>35% faster time-to-insight vs. static dashboards.</li>
+            <li>28% improvement for novice users; 15% for experts.</li>
+            <li>Implicit feedback signals were sufficient — explicit feedback was not required.</li>
+            <li>Policies generalized across datasets after as few as 10 interactions.</li>
+          </ul>
+
+          <h2 id="bibtex">BibTeX</h2>
+          <pre><code>@inproceedings{hassan2023vizrl,
+  title     = {Interactive Data Visualization with Reinforcement Learning from Human Feedback},
+  author    = {Hassan, Shakeel and Lee, Carol and Kumar, David and Martinez, Eve},
+  booktitle = {Proceedings of the CHI Conference on Human Factors in Computing Systems},
+  year      = {2023},
+  note      = {Best Paper Award}
+}</code></pre>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Shakeel Hassan · <a href="../../index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
